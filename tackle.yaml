@@ -3,8 +3,24 @@ module_name:
   message: What is the module's name >>
   default: terraform-aws-
   
+description:
+  type: input
+  message: What is the module's description >>
+  default: Terraform module to deploy
+  
 owner_username:
   type: input
   message: Your github username or org >>
   default: geometry-labs
 
+license:
+  type: select
+  message: What type of license do you want?
+  choices:
+    - closed: Closed source
+    - apache: Apache
+
+# TODO: Fix dis - Needs ref to template but that should be in tackle...
+#license_rm:
+#  type: remove
+#  path: LICENSE
